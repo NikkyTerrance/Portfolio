@@ -1,0 +1,158 @@
+.projects-wrapper {
+  padding: 4rem 2rem;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+.projects-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.project-card {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+  background: #1e293b;
+}
+
+.card-back {
+  background: #334155;
+  transform: rotateY(180deg);
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.project-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.project-btn {
+  padding: 0.5rem 1rem;
+  background: #0ea5e9;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.project-btn:hover {
+  background: #0284c7;
+}
+
+.projects-wrapper {
+  position: relative;
+  padding: 4rem 2rem;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.projects-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Meteor Styling --- */
+.meteor-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.meteor {
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(45deg, white, transparent);
+  opacity: 0.6;
+  transform: rotate(45deg);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) translateX(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(200px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.meteor:nth-child(odd) {
+  animation-duration: 2s;
+}
+.meteor:nth-child(even) {
+  animation-duration: 3s;
+}
+.meteor:nth-child(3n) { left: 10%; }
+.meteor:nth-child(4n) { left: 30%; }
+.meteor:nth-child(5n) { left: 50%; }
+.meteor:nth-child(6n) { left: 70%; }
+.meteor:nth-child(7n) { left: 90%; }
