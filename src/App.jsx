@@ -1,17 +1,20 @@
-import { Canvas, extend } from "@react-three/fiber";
-import { Experience } from "./components/Experience";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home";
+import { NotFound } from "./components/NotFound";
 import { Hero } from "./components/Hero";
-import {AboutMe} from "./components/AboutMe";
-import { Projects } from "./components/Projects";
 
 function App() {
   return (
     <>
-      <color attach="background" args={["#0d0d0d"]} />
-      <Hero />
-      <AboutMe/>
-      <Projects />
+      
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="*" element={<NotFound />} />
 
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -7,7 +7,7 @@ export const Experience = () => {
   return (
     <>
       
-     <group position-y={-1.5}> 
+     <group position-y={-1.3}> 
       <Avatar />
       </group>
       <ambientLight intensity={1} />
