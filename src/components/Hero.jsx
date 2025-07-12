@@ -28,7 +28,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="hero-wrapper">
+    <section className="hero-wrapper" id="hero">
 
 
        {/* 3D Avatar Layer */}
