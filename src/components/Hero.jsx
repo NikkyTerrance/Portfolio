@@ -18,7 +18,7 @@ export const Hero = () => {
       } else {
         // default desktop
         setCameraPos([0, 2, 8]);
-        setCameraFov(10);
+        setCameraFov(8);
       }
     }
 
